@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { convertTimestamp } from '../utilities/convertTimestamp';
 import { convertDirection } from '../utilities/convertDirection';
 import { useSelector, useDispatch } from 'react-redux';
@@ -6,51 +6,41 @@ import { addData, loadingData, stopLoadingData} from '../features/resultSlice';
 
 
 export const Result = () => {
-    //const currentData = useSelector((state) => state.weather.data);
-    //const currentLoad = useSelector((state) => state.weather.data);
-    const loading = useSelector((state) => state.weather.loading);
-    //const location = useSelector((state) => state.weather.location);
-    //const unit = useSelector((state) => state.weather.unit);
+    const unit = useSelector((state) => state.weather.unit);
     const reduxData = useSelector((state) => state.weather.data);
-
-    console.log(`loading: ${loading}`)
-
+    const search = useSelector((state) => state.weather.search);
+    console.log(`The search value is: ${search}`)
     const dispatch = useDispatch();
 
-    const [appState, setAppState] = useState({
-        loading: false,
-        data: null,
-    });
+    const key = "9c386e0118890725b196ccbcd09691e5";
 
     useEffect(() => {
         dispatch(loadingData());
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=amble&appid=9c386e0118890725b196ccbcd09691e5"
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=${unit}&appid=${key}`;
         fetch(apiUrl)
             .then((res) => res.json())
             .then((data) => {
             dispatch(addData(data));
-            setAppState({ loading: false, data: data });
             dispatch(stopLoadingData());
             });
-    }, [setAppState]);
+    }, [unit, search ]); 
+    // add more uitems in the array above, triggers when those values are updated
 
-    const dataPresent = appState.data; // Change this to check the redux state of data instead
 
     return (
-             <div>
-                 <p></p>
-            {dataPresent == null ? 
-            <p> No data present</p> : 
+        <div>
+            {reduxData.length === 0 ? 
+            <p> No data present</p>  :
             <div>
-                <p>{reduxData[0].name}</p>
-                <p>{reduxData[0].weather[0].description}</p>
-                <img alt="icon" src={`http://openweathermap.org/img/wn/${reduxData[0].weather[0].icon}@2x.png`}></img>
-                <p>Temperature: {reduxData[0].main.temp}</p>
-                <p>Wind Speed: {reduxData[0].wind.speed}</p>
-                <p>Direction: {convertDirection(reduxData[0].wind.deg)}</p>
-                <p>Sun Rise: {convertTimestamp(reduxData[0].sys.sunrise)}</p>
-                <p>Sun Sets: {convertTimestamp(reduxData[0].sys.sunset)}</p>
-            </div>
+                <p>{reduxData.name}</p>
+                <p>{reduxData.weather[0].description}</p>
+                <img alt="icon" src={`http://openweathermap.org/img/wn/${reduxData.weather[0].icon}@2x.png`}></img> 
+                <p>Temperature: {Math.round(reduxData.main.temp)}</p>
+                <p>Wind Speed: {Math.round(reduxData.wind.speed)}</p>
+                <p>Direction: {convertDirection(reduxData.wind.deg)}</p>
+                <p>Sun Rise: {convertTimestamp(reduxData.sys.sunrise)}</p>
+                <p>Sun Sets: {convertTimestamp(reduxData.sys.sunset)}</p>
+            </div>               
             }
         </div>
     )
