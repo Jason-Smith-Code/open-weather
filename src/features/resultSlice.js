@@ -23,10 +23,16 @@ export const resultSlice = createSlice({
           state.unit = 'metric'
         }
     },
+    loadingData: (state) => {
+      state.loading = true;
+    },
+    stopLoadingData: (state) => {
+      state.loading = false;
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { changeLocation, changeUnit, addData, loading } = resultSlice.actions
+export const { changeLocation, changeUnit, addData, loading, loadingData, stopLoadingData } = resultSlice.actions
 
 export default resultSlice.reducer
