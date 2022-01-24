@@ -2,10 +2,9 @@ import React from 'react';
 import { Result } from '../components/Result';
 import { Search } from '../components/Search';
 import { MeasurementTypeToggle } from '../components/MeasurementTypeToggle';
+import './App.css';
 
 function App() {
-
-  
   return (
     <div className='App'>
       <Search />
@@ -16,5 +15,3 @@ function App() {
 }
 
 export default App;
-
-// I need to access appstate from every file - Redux?

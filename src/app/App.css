@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
-}
+/* Mobile first */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+#root {
+  display: flex;
+  justify-content: center;
   min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p, button {
+  font-family: 'Impact', sans-serif;
+  line-height: 1;
+}
+
+.App {
+  width: fit-content;
+  max-width: 100%;
+  padding: 50px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#LocationName {
+  font-size: 50px;
+  margin:25px 0 ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#Description {
+  font-size: 25px;
+  margin:25px 0;
+}
+
+.UnitType {
+  border: none;
+  min-width: 100px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+#Temperature {
+  font-size: 50px;
+  margin:25px 0;
+}
+.metric::after {
+  content: '\2103';
+}
+
+.imperial::after {
+  content: '\2109';
+}
+
+.kmph::after {
+  content: 'kmph'
+}
+
+.Mph::after {
+  content: 'mph'
 }

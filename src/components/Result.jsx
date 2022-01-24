@@ -32,11 +32,11 @@ export const Result = () => {
             {reduxData.length === 0 ? 
             <p> No data present</p>  :
             <div>
-                <p>{reduxData.name}</p>
-                <p>{reduxData.weather[0].description}</p>
-                <img alt="icon" src={`http://openweathermap.org/img/wn/${reduxData.weather[0].icon}@2x.png`}></img> 
-                <p>Temperature: {Math.round(reduxData.main.temp)}</p>
-                <p>Wind Speed: {Math.round(reduxData.wind.speed)}</p>
+                <p id="LocationName">{reduxData.name}</p>
+                <img alt="icon" src={`http://openweathermap.org/img/wn/${reduxData.weather[0].icon}@2x.png`}></img>
+                <p id="Description">{reduxData.weather[0].description}</p>
+                <p id="Temperature" className={unit === "metric" ? "metric" : "imperial"}>{Math.round(reduxData.main.temp)}</p>
+                <p className={unit === "metric" ? "Mph" : "kmph"}>Wind Speed: {Math.round(reduxData.wind.speed)}</p>
                 <p>Direction: {convertDirection(reduxData.wind.deg)}</p>
                 <p>Sun Rise: {convertTimestamp(reduxData.sys.sunrise)}</p>
                 <p>Sun Sets: {convertTimestamp(reduxData.sys.sunset)}</p>

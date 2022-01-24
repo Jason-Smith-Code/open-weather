@@ -7,12 +7,10 @@ export const MeasurementTypeToggle = () => {
 
     const changeToMetric = () => {
         dispatch(changeUnitTypeToMetric());
-        console.log("Changed to metric")
     }
 
     const changeToImperial = () => {
         dispatch(changeUnitTypeToImperial());
-        console.log("Changed to Imperial")
     }
 
     useEffect(() =>{
@@ -20,9 +18,9 @@ export const MeasurementTypeToggle = () => {
     },[])
 
     return(
-        <div>
-            <button id="metric" onClick={changeToMetric}>Metric</button>
-            <button id="imperial" onClick={changeToImperial}>Imperial</button>
+        <div id="UnitTypeButtonsContainer">
+            <button className="UnitType" onClick={changeToMetric}>Metric</button>
+            <button className="UnitType" onClick={changeToImperial}>Imperial</button>
         </div>
     )
 }
