@@ -19,8 +19,8 @@ export const MeasurementTypeToggle = () => {
 
     return(
         <div id="UnitTypeButtonsContainer">
-            <button className="UnitType" onClick={changeToMetric}>Metric</button>
-            <button className="UnitType" onClick={changeToImperial}>Imperial</button>
+            <button id="MetricButton" onClick={changeToMetric}>Metric</button>
+            <button id="ImperialButton" onClick={changeToImperial}>Imperial</button>
         </div>
     )
 }

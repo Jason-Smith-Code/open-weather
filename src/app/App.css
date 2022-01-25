@@ -21,10 +21,15 @@ p, button {
 .App {
   width: fit-content;
   max-width: 100%;
-  padding: 50px;
+  padding: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid black;
+  border-radius: 50px;
+  margin: 25px;
+  max-height: 700px;
 }
 
 #LocationName {
@@ -37,24 +42,25 @@ p, button {
   margin:25px 0;
 }
 
-.UnitType {
+button {
   border: none;
   min-width: 100px;
   padding: 10px 20px;
   margin: 5px;
   font-size: 16px;
+  background-color: orangered;
 }
 
 #Temperature {
-  font-size: 50px;
+  font-size: 75px;
   margin:25px 0;
 }
 .metric::after {
-  content: '\2103';
+  content: '°c';
 }
 
 .imperial::after {
-  content: '\2109';
+  content: '°f';
 }
 
 .kmph::after {
@@ -63,4 +69,30 @@ p, button {
 
 .Mph::after {
   content: 'mph'
+}
+
+#UnitTypeButtonsContainer {
+  margin-top: 50px;
+}
+
+#MetricButton {
+  border-radius: 0 0 0 20px;
+}
+
+#ImperialButton {
+  border-radius: 0 0 20px 0;
+}
+
+#Search {
+  border-radius: 0 20px 0 0;
+}
+
+.Align-Right {
+  float: right;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  border: 3px solid black;
 }

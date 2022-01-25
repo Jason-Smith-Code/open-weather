@@ -28,8 +28,11 @@ export const Search = () => {
 
     return (
         <form onSubmit={submitSearch}>
-            <input type="search" name="q" aria-label="Search for a town" placeholder='Town Name' value={location} onChange={handleChange}></input>
-            <button onClick={onSubmit} >Search</button>
+            <div className="Align-Right">
+                <button id="Search" onClick={onSubmit} >Search</button>
+            </div>
+            <input type="search" name="q" aria-label="Search for a town" placeholder='Enter Town Name Here' value={location} onChange={handleChange}></input>
+            
         </form>
     )
 }
