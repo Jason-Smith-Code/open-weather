@@ -2,14 +2,15 @@ import React, { useEffect } from 'react';
 import { convertTimestamp } from '../utilities/convertTimestamp';
 import { convertDirection } from '../utilities/convertDirection';
 import { useSelector, useDispatch } from 'react-redux';
-import { addData, loadingData, stopLoadingData} from '../features/resultSlice';
+import { addData, loadingData, stopLoadingData, applyError, removeError} from '../features/resultSlice';
 
 
 export const Result = () => {
     const unit = useSelector((state) => state.weather.unit);
     const reduxData = useSelector((state) => state.weather.data);
     const search = useSelector((state) => state.weather.search);
-    console.log(`The search value is: ${search}`)
+    const containsError = useSelector((state) => state.weather.hasError);
+    console.log(containsError)
     const dispatch = useDispatch();
 
     const key = "9c386e0118890725b196ccbcd09691e5";
@@ -17,18 +18,27 @@ export const Result = () => {
     useEffect(() => {
         dispatch(loadingData());
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=${unit}&appid=${key}`;
-        fetch(apiUrl)
-            .then((res) => res.json())
-            .then((data) => {
+        fetch(apiUrl).then((res) => {
+            if (res.ok) {
+                dispatch(removeError())
+              return res.json();
+            } else {
+                dispatch(applyError())
+              throw new Error('Something went wrong');
+            }
+          })
+          .then((data) => {
             dispatch(addData(data));
             dispatch(stopLoadingData());
-            });
+          })
+          .catch((error) => {
+            console.log(error)
+          });
     }, [unit, search ]); 
-    // add more uitems in the array above, triggers when those values are updated
-
 
     return (
         <div>
+            {containsError ? <p>We could not find any data for the location, try again</p> : <p></p>}
             {reduxData.length === 0 ? 
             <p> No data present</p>  :
             <div>

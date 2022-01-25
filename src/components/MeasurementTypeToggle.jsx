@@ -1,8 +1,10 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { changeUnitTypeToMetric, changeUnitTypeToImperial } from "../features/resultSlice";
 import { useEffect } from "react";
 
 export const MeasurementTypeToggle = () => {
+    const unit = useSelector((state) => state.weather.unit);
+
     const dispatch = useDispatch();
 
     const changeToMetric = () => {
@@ -19,8 +21,8 @@ export const MeasurementTypeToggle = () => {
 
     return(
         <div id="UnitTypeButtonsContainer">
-            <button id="MetricButton" onClick={changeToMetric}>Metric</button>
-            <button id="ImperialButton" onClick={changeToImperial}>Imperial</button>
+            <button className={unit === "metric" ? "Border" : "NoBorder"} id="MetricButton" onClick={changeToMetric}>Metric</button>
+            <button className={unit === "imperial" ? "Border" : "NoBorder"} id="ImperialButton" onClick={changeToImperial}>Imperial</button>
         </div>
     )
 }

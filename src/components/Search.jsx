@@ -29,9 +29,15 @@ export const Search = () => {
     return (
         <form onSubmit={submitSearch}>
             <div className="Align-Right">
-                <button id="Search" onClick={onSubmit} >Search</button>
+                <button disabled={!location} id="Search" onClick={onSubmit} >Search</button>
             </div>
-            <input type="search" name="q" aria-label="Search for a town" placeholder='Enter Town Name Here' value={location} onChange={handleChange}></input>
+            <input 
+                type="search"
+                name="q" 
+                aria-label="Search for a town" 
+                placeholder='Enter Town Name Here' 
+                required 
+                value={location} onChange={handleChange}></input>
             
         </form>
     )

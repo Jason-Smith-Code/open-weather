@@ -8,8 +8,10 @@ function App() {
   return (
     <div className='App'>
       <Search />
-      <Result />
-      <MeasurementTypeToggle />
+      <div id="Results">
+        <Result />
+        <MeasurementTypeToggle />
+      </div>
     </div>
   );
 }
