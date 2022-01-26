@@ -2,7 +2,13 @@
 
 ## Description
 
-Open weather app is an application I build to learn about working with api.
+Open weather app is an application I built to learn about working with api.
+It's been a fun little project and certainly helped my understanding of some things I was struggling with including:
+- useEffect
+- Ternary Operators
+- Redux Toolkit
+
+I suspect that my code could be vastly improved, and would absolutely love some feedback and areas to improve :)
 
 ## Objective
 
