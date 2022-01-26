@@ -24,7 +24,9 @@ I suspect that my code could be vastly improved, and would absolutely love some 
 
 My aim was to work with open weather api, allow a user to perform a search and return the data relevant to that search.
 I built this with a user in mind, who just wants a fast real time reading of the current weather in a given location.
-This app will be rendered in the users browser.
+The user will also be able to change the unit type displayed in either metric or imperial.
+
+This app will be built with react, redux and be rendered in the users browser.
 
 ## Screen Shots
 
