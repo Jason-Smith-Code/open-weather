@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 export const resultSlice = createSlice({
   name: 'weather',
@@ -12,7 +12,6 @@ export const resultSlice = createSlice({
   reducers: {
     addData: (state, action) => {
         state.data = action.payload;
-        console.log("data has been updated");
     },
     changeSearch: (state, action) => {
         state.search = action.payload

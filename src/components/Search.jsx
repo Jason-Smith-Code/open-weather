@@ -4,10 +4,7 @@ import { useDispatch } from "react-redux";
 import { changeSearch } from "../features/resultSlice";
 
 export const Search = () => {
-    // const reduxSearch = useSelector((state) => state.weather.search);
-
     const dispatch = useDispatch();
-
     const [location, setLocation] = useState('');
 
     const handleChange = (e) => {
@@ -21,9 +18,7 @@ export const Search = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         setLocation(e.target.value);
-        dispatch(changeSearch(location))
-        console.log(location)
-        console.log("Form submitted")
+        dispatch(changeSearch(location));
     }
 
     return (

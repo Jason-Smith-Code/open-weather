@@ -10,7 +10,6 @@ export const Result = () => {
     const reduxData = useSelector((state) => state.weather.data);
     const search = useSelector((state) => state.weather.search);
     const containsError = useSelector((state) => state.weather.hasError);
-    console.log(containsError)
     const dispatch = useDispatch();
 
     const key = "9c386e0118890725b196ccbcd09691e5";
@@ -38,7 +37,7 @@ export const Result = () => {
 
     return (
         <div>
-            {containsError ? <p>We could not find any data for the location, try again</p> : <p></p>}
+            {containsError ? <p className="Error-Message">We could not find any data for that location, try again</p> : <p></p>}
             {reduxData.length === 0 ? 
             <p> No data present</p>  :
             <div>
