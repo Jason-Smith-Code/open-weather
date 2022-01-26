@@ -1,5 +1,15 @@
 # Open Weather App
 
+👋 Hi, I’m @Jason-Smith-Code
+
+👀 I’m interested in 
+- Programming (Javascript)
+- Gaming ( RTS, FPS & ARPG's)
+
+📫 How to reach me 
+https://www.linkedin.com/in/jason-smith-193674187/
+
+
 ## Description
 
 Open weather app is an application I built to learn about working with api.
