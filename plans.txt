@@ -1,4 +1,0 @@
-if current time > sunrise && less than Sunset
-Identiify what type of weather it is, and show background image
-else
-show night time image
