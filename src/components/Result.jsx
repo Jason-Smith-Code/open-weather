@@ -33,7 +33,7 @@ export const Result = () => {
           .catch((error) => {
             console.log(error)
           });
-    }, [unit, search ]); 
+    }, [unit, search, dispatch ]); 
 
     return (
         <div>
