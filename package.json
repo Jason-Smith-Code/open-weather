@@ -11,7 +11,8 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-scripts": "^5.0.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "homepage" : "https://jason-smith-code.github.io/open-weather"
   },
   "scripts": {
     "start": "react-scripts start",
