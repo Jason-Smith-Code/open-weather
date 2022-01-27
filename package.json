@@ -2,7 +2,7 @@
   "name": "open-weather",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://jason-smith-code.github.io/open-weather",
+  "homepage" : ".",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
