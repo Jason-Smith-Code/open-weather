@@ -38,6 +38,11 @@ Eberhard Grossgasteiger (Photographer) for the fantastic photo used as a backgro
 https://www.pexels.com/@eberhardgross
 
 
+## Viewing the application
+
+Visit : https://jason-smith-code.github.io/open-weather/
+
+
 ## Project status
 
 I would love to have the background image of the application change based on both the time of day and the current weather.
