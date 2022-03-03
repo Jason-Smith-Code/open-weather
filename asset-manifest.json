@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6ebaa9a.css",
-    "main.js": "/static/js/main.1cc2e99a.js",
-    "static/js/787.1a44afae.chunk.js": "/static/js/787.1a44afae.chunk.js",
-    "static/media/night.jpg": "/static/media/night.fdad8a5ea41e5fd8f495.jpg",
-    "index.html": "/index.html",
-    "main.e6ebaa9a.css.map": "/static/css/main.e6ebaa9a.css.map",
-    "main.1cc2e99a.js.map": "/static/js/main.1cc2e99a.js.map",
-    "787.1a44afae.chunk.js.map": "/static/js/787.1a44afae.chunk.js.map"
+    "main.css": "/Jason-Smith-Code/open-weather/static/css/main.157fff1f.css",
+    "main.js": "/Jason-Smith-Code/open-weather/static/js/main.3ba4d277.js",
+    "static/js/787.1a44afae.chunk.js": "/Jason-Smith-Code/open-weather/static/js/787.1a44afae.chunk.js",
+    "static/media/night.jpg": "/Jason-Smith-Code/open-weather/static/media/night.fdad8a5ea41e5fd8f495.jpg",
+    "index.html": "/Jason-Smith-Code/open-weather/index.html",
+    "main.157fff1f.css.map": "/Jason-Smith-Code/open-weather/static/css/main.157fff1f.css.map",
+    "main.3ba4d277.js.map": "/Jason-Smith-Code/open-weather/static/js/main.3ba4d277.js.map",
+    "787.1a44afae.chunk.js.map": "/Jason-Smith-Code/open-weather/static/js/787.1a44afae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6ebaa9a.css",
-    "static/js/main.1cc2e99a.js"
+    "static/css/main.157fff1f.css",
+    "static/js/main.3ba4d277.js"
   ]
 }
