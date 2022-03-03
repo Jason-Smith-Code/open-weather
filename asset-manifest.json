@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/jason-smith-code/open-weather/static/css/main.e8417ac9.css",
-    "main.js": "/jason-smith-code/open-weather/static/js/main.aa9f9f77.js",
-    "static/js/787.1a44afae.chunk.js": "/jason-smith-code/open-weather/static/js/787.1a44afae.chunk.js",
-    "static/media/night.jpg": "/jason-smith-code/open-weather/static/media/night.fdad8a5ea41e5fd8f495.jpg",
-    "index.html": "/jason-smith-code/open-weather/index.html",
-    "main.e8417ac9.css.map": "/jason-smith-code/open-weather/static/css/main.e8417ac9.css.map",
-    "main.aa9f9f77.js.map": "/jason-smith-code/open-weather/static/js/main.aa9f9f77.js.map",
-    "787.1a44afae.chunk.js.map": "/jason-smith-code/open-weather/static/js/787.1a44afae.chunk.js.map"
+    "main.css": "/open-weather/static/css/main.a87140b5.css",
+    "main.js": "/open-weather/static/js/main.8dc2cd5d.js",
+    "static/js/787.1a44afae.chunk.js": "/open-weather/static/js/787.1a44afae.chunk.js",
+    "static/media/night.jpg": "/open-weather/static/media/night.fdad8a5ea41e5fd8f495.jpg",
+    "index.html": "/open-weather/index.html",
+    "main.a87140b5.css.map": "/open-weather/static/css/main.a87140b5.css.map",
+    "main.8dc2cd5d.js.map": "/open-weather/static/js/main.8dc2cd5d.js.map",
+    "787.1a44afae.chunk.js.map": "/open-weather/static/js/787.1a44afae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8417ac9.css",
-    "static/js/main.aa9f9f77.js"
+    "static/css/main.a87140b5.css",
+    "static/js/main.8dc2cd5d.js"
   ]
 }
